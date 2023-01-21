@@ -105,6 +105,7 @@ exports[`<Card /> should render a card with default size and its info 1`] = `
   </h4>
   <button
     class="c1"
+    href="/products"
   >
     <span>
       Ver mais

@@ -44,6 +44,7 @@ exports[`<Sidebar /> should render the links 1`] = `
 
 .c1:hover svg {
   fill: #FFFFFF;
+  -webkit-text-stroke-color: white;
 }
 
 .c1:hover span {
@@ -82,6 +83,7 @@ exports[`<Sidebar /> should render the links 1`] = `
 
 .c2:hover svg {
   fill: #FFFFFF;
+  -webkit-text-stroke-color: white;
 }
 
 .c2:hover span {
@@ -141,15 +143,13 @@ exports[`<Sidebar /> should render the links 1`] = `
       width="24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g>
-        <path
-          d="M0 0h24v24H0z"
-          fill="none"
-        />
-        <path
-          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-        />
-      </g>
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+      <path
+        d="M16.81 8.94l-3.75-3.75L4 14.25V18h3.75l9.06-9.06zM6 16v-.92l7.06-7.06.92.92L6.92 16H6zM19.71 6.04a.996.996 0 000-1.41l-2.34-2.34a1.001 1.001 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83zM2 20h20v4H2z"
+      />
     </svg>
     <span>
       Meus pedidos
@@ -160,28 +160,21 @@ exports[`<Sidebar /> should render the links 1`] = `
   >
     <svg
       color="#18183F"
-      fill="none"
+      fill="currentColor"
       height="24"
       stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
+      stroke-width="0"
       style="color: rgb(24, 24, 63);"
       viewBox="0 0 24 24"
       width="24"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        d="M0 0h24v24H0z"
+        fill="none"
       />
-      <polyline
-        points="16 17 21 12 16 7"
-      />
-      <line
-        x1="21"
-        x2="9"
-        y1="12"
-        y2="12"
+      <path
+        d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"
       />
     </svg>
     <span>
@@ -235,6 +228,7 @@ exports[`<Sidebar /> should render the logout button 1`] = `
 
 .c1:hover svg {
   fill: #FFFFFF;
+  -webkit-text-stroke-color: white;
 }
 
 .c1:hover span {
@@ -273,6 +267,7 @@ exports[`<Sidebar /> should render the logout button 1`] = `
 
 .c2:hover svg {
   fill: #FFFFFF;
+  -webkit-text-stroke-color: white;
 }
 
 .c2:hover span {
@@ -332,15 +327,13 @@ exports[`<Sidebar /> should render the logout button 1`] = `
       width="24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g>
-        <path
-          d="M0 0h24v24H0z"
-          fill="none"
-        />
-        <path
-          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-        />
-      </g>
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+      <path
+        d="M16.81 8.94l-3.75-3.75L4 14.25V18h3.75l9.06-9.06zM6 16v-.92l7.06-7.06.92.92L6.92 16H6zM19.71 6.04a.996.996 0 000-1.41l-2.34-2.34a1.001 1.001 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83zM2 20h20v4H2z"
+      />
     </svg>
     <span>
       Meus pedidos
@@ -351,28 +344,21 @@ exports[`<Sidebar /> should render the logout button 1`] = `
   >
     <svg
       color="#18183F"
-      fill="none"
+      fill="currentColor"
       height="24"
       stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
+      stroke-width="0"
       style="color: rgb(24, 24, 63);"
       viewBox="0 0 24 24"
       width="24"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+        d="M0 0h24v24H0z"
+        fill="none"
       />
-      <polyline
-        points="16 17 21 12 16 7"
-      />
-      <line
-        x1="21"
-        x2="9"
-        y1="12"
-        y2="12"
+      <path
+        d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"
       />
     </svg>
     <span>

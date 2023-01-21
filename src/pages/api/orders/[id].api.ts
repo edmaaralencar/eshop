@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
+import prisma from '../../../lib/prisma'
 
 export default async function handler(
   req: NextApiRequest,
@@ -7,7 +8,7 @@ export default async function handler(
   if (req.method === 'GET') {
     const { id } = req.query
 
-    const order = await prisma?.order.findUnique({
+    const order = await prisma.order.findUnique({
       where: {
         id: String(id)
       },

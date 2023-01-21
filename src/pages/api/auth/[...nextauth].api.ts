@@ -25,16 +25,19 @@ export const options: NextAuthOptions = {
         password: { label: 'Password', type: 'password' }
       },
       authorize: async (credentials: any, _) => {
-        const user = await fetch(`/api/users/sign-in`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            accept: 'application/json'
-          },
-          body: Object.entries(credentials)
-            .map((e) => e.join('='))
-            .join('&')
-        })
+        const user = await fetch(
+          `${process.env.NEXTAUTH_URL}/api/users/sign-in`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+              accept: 'application/json'
+            },
+            body: Object.entries(credentials)
+              .map((e) => e.join('='))
+              .join('&')
+          }
+        )
           .then((res) => res.json())
           .catch(() => {
             return null

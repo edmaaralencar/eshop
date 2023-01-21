@@ -38,12 +38,12 @@ function Home({ products }: HomeProps) {
           <Card
             size="normal"
             title="Veja a coleção masculina de roupas"
-            image={img}
+            image="/produto.png"
           />
           <Card
             size="normal"
             title="Veja a coleção feminina de roupas"
-            image={img}
+            image="/produto.png"
           />
         </S.CardsContainer>
 
@@ -69,7 +69,7 @@ function Home({ products }: HomeProps) {
             size="large"
             title="Veja as novidades da loja"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit.  aliquid natus eveniet aliquam nobis velit veritatis vel excepturi laboriosam quod tenetur placeat!"
-            image={img}
+            image="/produto.png"
           />
         </S.CardContainer>
       </S.Section>

@@ -43,7 +43,11 @@ export default function Product({ product }: ProductProps) {
           <Slider>
             {product.images.map((img) => (
               <S.ProductImage key={img.id}>
-                <Image layout="fill" src={formatImageUrl(img.image_url)} />
+                <Image
+                  layout="fill"
+                  src={formatImageUrl(img.image_url)}
+                  alt={product.name}
+                />
               </S.ProductImage>
             ))}
           </Slider>

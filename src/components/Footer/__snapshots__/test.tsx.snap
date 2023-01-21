@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should render the heading 1`] = `
+.c0 {
+  margin-top: 3.2rem;
+  padding: 2.4rem 0;
+  text-align: center;
+  color: #666666;
+  font-size: 1.6rem;
+  border-top: 3px solid #f5f8fa;
+}
+
+<footer
+  class="c0"
+>
+  <span>
+    Edmar Alencar 2022 © Todos os direitos reservados
+  </span>
+</footer>
+`;

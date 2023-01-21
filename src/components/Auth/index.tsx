@@ -18,7 +18,7 @@ function Auth({ title, children }: AuthProps) {
             <Logo />
           </S.LogoWrapper>
         </Link>
-        <Image src="/produto.png" width={550} height={380} />
+        <Image src="/produto.png" alt="Auth Image" width={550} height={380} />
       </S.ImageWrapper>
       <S.Content>
         <Link href="/" passHref>

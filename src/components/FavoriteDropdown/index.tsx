@@ -32,6 +32,7 @@ function FavoriteDropdown() {
                   <S.Favorite>
                     <S.FavoriteContainer>
                       <Image
+                        alt={product.name}
                         src={formatImageUrl(product.images[0].image_url)}
                         width={100}
                         height={80}

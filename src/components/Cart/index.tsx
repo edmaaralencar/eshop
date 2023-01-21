@@ -49,6 +49,7 @@ function Cart({ onCloseCart }: CartProps) {
                   <S.Product key={item.product?.id}>
                     <S.ProductImage>
                       <Image
+                        alt={item.product.name}
                         src={formatImageUrl(item.product?.images[0].image_url)}
                         width={130}
                         height={130}

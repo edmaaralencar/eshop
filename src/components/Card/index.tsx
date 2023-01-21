@@ -6,7 +6,7 @@ import * as S from './styles'
 export type CardProps = {
   size: 'normal' | 'large'
   title: string
-  image: string | StaticImageData
+  image: string
   description?: string
 }
 
