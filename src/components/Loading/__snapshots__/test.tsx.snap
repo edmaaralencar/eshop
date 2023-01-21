@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loading /> should render the heading 1`] = `
+.c0 .loading {
+  width: 10rem;
+  height: 10rem;
+  border: 5px solid #F4F4FF;
+  border-radius: 50%;
+  border-top-color: #8787FF;
+  -webkit-animation: spinner 2s linear infinite;
+  animation: spinner 2s linear infinite;
+  margin: 0 auto;
+}
+
+<div
+  class="c0"
+  data-testid="loading"
+>
+  <div
+    class="loading"
+  />
+</div>
+`;

@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormSignIn /> should render form with inputs 1`] = `
+.c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #6C6CFF;
+  color: #FFFFFF;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+  padding: 0 2rem;
+  height: 5.2rem;
+  width: 100%;
+}
+
+.c4 span {
+  font-weight: 300;
+}
+
+.c4:disabled {
+  cursor: not-allowed;
+}
+
+.c4:hover {
+  background-color: #7676ff;
+}
+
+.c4 span {
+  font-size: 1.8rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.c2 span {
+  color: #de3838;
+  font-size: 1.2rem;
+}
+
+.c3 {
+  background-color: #ebebf1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1rem;
+  border: 0.2rem solid;
+  border-color: #ebebf1;
+  -webkit-transition: border-color 0.2s ease-out;
+  transition: border-color 0.2s ease-out;
+}
+
+.c3:focus-within {
+  border-color: #6C6CFF;
+}
+
+.c3 input {
+  border: none;
+  padding: 1.5rem 0;
+  background: transparent;
+  outline: none;
+  padding-left: 1rem;
+  font-size: 1.4rem;
+}
+
+.c3 input::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c3 input::-moz-placeholder {
+  font-size: 1.4rem;
+}
+
+.c3 input:-ms-input-placeholder {
+  font-size: 1.4rem;
+}
+
+.c3 input::placeholder {
+  font-size: 1.4rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.c5 {
+  font-size: 1.4rem;
+  display: block;
+  text-align: center;
+  margin-top: 3.2rem;
+}
+
+.c5 a {
+  color: #6C6CFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 a:hover {
+  color: #3939ff;
+}
+
+<form
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        <svg
+          color="#2E2E2E"
+          fill="none"
+          height="22"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          style="color: rgb(46, 46, 46);"
+          viewBox="0 0 24 24"
+          width="22"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+          />
+          <polyline
+            points="22,6 12,13 2,6"
+          />
+        </svg>
+        <input
+          placeholder="Email*"
+          value=""
+        />
+      </div>
+      <span />
+    </div>
+    <div
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        <svg
+          color="#2E2E2E"
+          fill="none"
+          height="22"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          style="color: rgb(46, 46, 46);"
+          viewBox="0 0 24 24"
+          width="22"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            height="11"
+            rx="2"
+            ry="2"
+            width="18"
+            x="3"
+            y="11"
+          />
+          <path
+            d="M7 11V7a5 5 0 0 1 10 0v4"
+          />
+        </svg>
+        <input
+          placeholder="Senha*"
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+  <button
+    class="c4"
+    disabled=""
+    type="submit"
+  >
+    <span>
+      Entrar
+    </span>
+  </button>
+  <span
+    class="c5"
+  >
+    Não tem uma conta? 
+    <a
+      href="/sign-up"
+    >
+      Registre-se
+    </a>
+  </span>
+</form>
+`;

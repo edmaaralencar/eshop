@@ -11,5 +11,14 @@ module.exports = withPWA({
   pwa: {
     dest: 'public',
     disable: !isProd
-  }
+  },
+  images: {
+    domains: [
+      'dummyjson.com',
+      'i.dummyjson.com',
+      'i.pinimg.com',
+      'png.pngtree.com'
+    ]
+  },
+  pageExtensions: ['page.tsx', 'api.ts', 'api.tsx']
 })

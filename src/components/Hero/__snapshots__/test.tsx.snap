@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hero /> should render the heading and button 1`] = `
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  -webkit-transition: border-color 0.1s ease-out;
+  transition: border-color 0.1s ease-out;
+  -webkit-transition: color 0.1s ease-out;
+  transition: color 0.1s ease-out;
+  padding: 0 2rem;
+  height: 5.2rem;
+}
+
+.c3 span {
+  font-weight: 300;
+}
+
+.c3:disabled {
+  cursor: not-allowed;
+}
+
+.c3:hover {
+  border-color: #e6e6e6;
+  color: #e6e6e6;
+}
+
+.c3:hover svg {
+  color: #e6e6e6 !important;
+}
+
+.c3 span {
+  font-size: 1.8rem;
+}
+
+.c3 svg {
+  margin-left: 3.2rem;
+  margin-top: 0.1rem;
+}
+
+.c0 {
+  margin: 0 auto;
+  height: 60rem;
+  width: 100%;
+  max-width: 117rem;
+  padding: 0 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4rem;
+  background-color: #6C6CFF;
+}
+
+.c1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1 h1 {
+  color: #FFFFFF;
+  font-size: 4rem;
+}
+
+.c1 p {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin-top: 2.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  height: 34rem;
+}
+
+.c2 {
+  width: 20rem;
+}
+
+<section
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <h1>
+      Compre os melhores sapatos do mercado
+    </h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe suscipit deleniti, placeat nobis, ut, porro dignissimos distinctio.
+    </p>
+    <div
+      class="c2"
+    >
+      <a
+        class="c3"
+        href=""
+      >
+        <span>
+          Comprar
+        </span>
+        <svg
+          color="#ffffff"
+          fill="none"
+          height="22"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          style="color: rgb(255, 255, 255);"
+          viewBox="0 0 24 24"
+          width="22"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="5"
+            x2="19"
+            y1="12"
+            y2="12"
+          />
+          <polyline
+            points="12 5 19 12 12 19"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div
+    class="c4"
+  >
+    <span
+      style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
+    >
+      <img
+        alt=""
+        data-nimg="fill"
+        decoding="async"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+      />
+      <noscript />
+    </span>
+  </div>
+</section>
+`;

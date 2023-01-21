@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Slider /> should render the heading 1`] = `
+.c0 {
+  height: 100%;
+}
+
+.c0 .slick-slider {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c0 .slick-list {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .slick-list:focus {
+  outline: none;
+}
+
+.c0 .slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.c0 .slick-slider .slick-track,
+.c0 .slick-slider .slick-list {
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.c0 .slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .slick-arrow {
+  display: none !important;
+}
+
+.c0 .slick-track:before,
+.c0 .slick-track:after {
+  display: table;
+  content: '';
+}
+
+.c0 .slick-dots {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+  gap: 1.6rem;
+}
+
+.c0 .slick-dots li {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #F4F4FF;
+  border-radius: 50%;
+}
+
+.c0 .slick-dots li.slick-active {
+  background: #8787FF;
+}
+
+.c0 .slick-dots button {
+  opacity: 0;
+}
+
+.c0 .slick-track:after {
+  clear: both;
+}
+
+.c0 .slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.c0 .slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 0px;
+}
+
+.c0 [dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.c0 .slick-slide img {
+  display: block;
+}
+
+.c0 .slick-slide.slick-loading img {
+  display: none;
+}
+
+.c0 .slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.c0 .slick-initialized .slick-slide {
+  display: block;
+}
+
+.c0 .slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.c0 .slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.c0 .slick-arrow.slick-hidden {
+  display: none;
+}
+
+<section
+  class="c0"
+>
+  <div
+    class="slick-slider slick-initialized"
+    dir="ltr"
+  >
+    <div
+      class="slick-list"
+    >
+      <div
+        class="slick-track"
+        style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+      >
+        <div
+          aria-hidden="false"
+          class="slick-slide slick-active slick-current"
+          data-index="0"
+          style="outline: none; width: 0px;"
+          tabindex="-1"
+        >
+          <div>
+            <h1
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              1
+            </h1>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="1"
+          style="outline: none; width: 0px;"
+          tabindex="-1"
+        >
+          <div>
+            <h1
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              2
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul
+      class="slick-dots"
+      style="display: block;"
+    >
+      <li
+        class="slick-active"
+      >
+        <button>
+          1
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          2
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+`;

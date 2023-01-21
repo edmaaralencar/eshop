@@ -15,8 +15,16 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
+  button, a {
+    cursor: pointer;
+  }
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: 'Lexend', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+
+  .Toastify__toast-body {
+    font-size: 1.6rem;
   }
 `
 
