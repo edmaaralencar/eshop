@@ -62,9 +62,7 @@ function CheckoutForm() {
         {error && <S.Error>{error} Tente novamente.</S.Error>}
 
         <S.ButtonContainer>
-          <Link href="/products">
-            <a href="">Continuar comprando</a>
-          </Link>
+          <Link href="/products">Continuar comprando</Link>
           <Button type="submit" fullWidth disabled={!stripe || !elements}>
             Pagar
           </Button>

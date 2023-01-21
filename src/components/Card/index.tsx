@@ -30,7 +30,7 @@ function Card({ size, title, image, description }: CardProps) {
   return (
     <S.Wrapper>
       <h4>{title}</h4>
-      <Link href="/products" passHref>
+      <Link href="/products" passHref legacyBehavior>
         <Button size="small" variant="outlined">
           Ver mais
         </Button>

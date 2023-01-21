@@ -28,17 +28,13 @@ function Header() {
       <Dialog.Root open={openCart} onOpenChange={setOpenCart}>
         <S.Wrapper>
           <Link href="/" passHref>
-            <a>
-              <Logo />
-            </a>
+            <Logo />
           </Link>
 
           {session ? (
             <S.Nav>
               <Link href="/profile" passHref>
-                <a href="">
-                  <FiUser size={26} color="#071B39" />
-                </a>
+                <FiUser size={26} color="#071B39" />
               </Link>
               <HoverCard.Trigger asChild>
                 <button data-testid="open-wishlist">
@@ -56,7 +52,7 @@ function Header() {
               </button>
             </S.Nav>
           ) : (
-            <Link href="/sign-in" passHref>
+            <Link href="/sign-in" passHref legacyBehavior>
               <Button size="small" as="a">
                 Login
               </Button>

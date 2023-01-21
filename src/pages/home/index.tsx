@@ -1,7 +1,5 @@
 import { HomeProps } from 'pages/index.page'
 
-import img from '../../../public/produto.png'
-
 import Card from 'components/Card'
 import { Heading } from 'components/Heading'
 import Hero from 'components/Hero'

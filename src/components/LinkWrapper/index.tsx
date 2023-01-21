@@ -10,7 +10,7 @@ export type LinkWrapperProps = {
 
 function LinkWrapper({ href, children }: LinkWrapperProps) {
   return (
-    <Link href={href} passHref>
+    <Link href={href} passHref legacyBehavior>
       <S.Wrapper>
         {children}
         <FiArrowRight size={22} color="#5B5B69" />

@@ -56,7 +56,11 @@ function FavoriteDropdown() {
                       />
                     </S.ButtonContainer>
 
-                    <Link href={`/products/${product.id}`} passHref>
+                    <Link
+                      href={`/products/${product.id}`}
+                      passHref
+                      legacyBehavior
+                    >
                       <Button as="a" variant="secondary" fullWidth size="small">
                         Ver mais
                       </Button>

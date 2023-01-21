@@ -12,7 +12,7 @@ function Sidebar() {
 
   return (
     <S.Wrapper>
-      <Link href="/profile" passHref>
+      <Link href="/profile" passHref legacyBehavior>
         <S.NavItem active={router.pathname === '/profile'}>
           <RiAccountCircleLine
             color={router.pathname === '/profile' ? '#ffffff' : '#18183F'}
@@ -21,7 +21,7 @@ function Sidebar() {
           <span>Minha conta</span>
         </S.NavItem>
       </Link>
-      <Link href="/orders" passHref>
+      <Link href="/orders" passHref legacyBehavior>
         <S.NavItem active={router.pathname === '/orders'}>
           <MdOutlineBorderColor
             color={router.pathname === '/orders' ? '#ffffff' : '#18183F'}

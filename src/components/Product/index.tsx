@@ -59,7 +59,7 @@ function Product({ id, name, image, price }: ProductProps) {
         <span>{name}</span>
         <strong>{formatMoney(price)}</strong>
       </S.ProductInfo>
-      <Link href={`/products/${id}`} passHref>
+      <Link href={`/products/${id}`} passHref legacyBehavior>
         <Button as="a" fullWidth>
           Ver mais
         </Button>

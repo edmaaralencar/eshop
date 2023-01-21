@@ -60,7 +60,11 @@ export default function Orders({ orders }: OrdersProps) {
 
                       <div>
                         <span>{item.product.name}</span>
-                        <Link href={`/products/${item.product.id}`} passHref>
+                        <Link
+                          href={`/products/${item.product.id}`}
+                          passHref
+                          legacyBehavior
+                        >
                           <Button as="a" size="small">
                             Comprar novamente
                           </Button>

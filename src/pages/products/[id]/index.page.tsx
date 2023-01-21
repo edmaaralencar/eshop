@@ -4,8 +4,9 @@ import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { ParsedUrlQuery } from 'querystring'
 import { FiArrowRight, FiMinusCircle, FiPlusCircle } from 'react-icons/fi'
+import prisma from 'lib/prisma'
 
-import { api } from 'lib/axios'
+import { api } from '../../../lib/axios'
 import { useCart } from 'hooks/use-cart'
 import { formatMoney } from 'utils/format-money'
 import { IProduct } from '../../../@types/product'
@@ -31,6 +32,8 @@ export default function Product({ product }: ProductProps) {
 
   const { status } = useSession()
   const { addProductToCart } = useCart()
+
+  console.log(product)
 
   return (
     <S.Wrapper>
@@ -85,14 +88,11 @@ export default function Product({ product }: ProductProps) {
 }
 
 export async function getStaticPaths() {
-  const { data: products } = await api.get('/products')
+  const products = await prisma.product.findMany({})
 
   const paths = products.map(({ id }: { id: string }) => ({ params: { id } }))
 
-  return {
-    paths,
-    fallback: true
-  }
+  return { paths, fallback: false }
 }
 
 export const getStaticProps: GetStaticProps<ProductProps, Params> = async (
@@ -100,14 +100,28 @@ export const getStaticProps: GetStaticProps<ProductProps, Params> = async (
 ) => {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const params = context.params!
-  const { data } = await api({
-    method: 'GET',
-    url: `/products/${params.id}`
+  // const { data } = await api({
+  //   method: 'GET',
+  //   url: `/products/${params.id}`
+  // })
+
+  const product = await prisma.product.findUnique({
+    where: {
+      id: String(params.id)
+    },
+    include: {
+      images: true
+    }
   })
 
+  if (!product) {
+    return { notFound: true }
+  }
+
   return {
+    revalidate: 60,
     props: {
-      product: data
+      product: JSON.parse(JSON.stringify(product))
     }
   }
 }

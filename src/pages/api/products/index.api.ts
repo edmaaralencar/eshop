@@ -15,6 +15,12 @@ export default async function handle(
       }
     })
 
+    if (!products) {
+      return res.status(400).json({
+        message: 'Error'
+      })
+    }
+
     return res.status(200).json(products)
   }
 
