@@ -26,7 +26,7 @@ function Product({ id, name, image, price }: ProductProps) {
       id,
       name,
       description: '',
-      images: [{ id, image_url: formatImageUrl(image) }],
+      images: [{ id, image_url: image }],
       price
     })
   }
