@@ -14,8 +14,14 @@ import FavoriteDropdown from 'components/FavoriteDropdown'
 
 import * as S from './styles'
 
-function Header() {
+type HeaderProps = {
+  isCartOpen?: boolean | null
+  onOpenCart?: (open: boolean) => void | null
+}
+
+function Header({ isCartOpen = null, onOpenCart }: HeaderProps) {
   const [openCart, setOpenCart] = useState(false)
+  const [openWishlist, setOpenWishlist] = useState(false)
   const { data: session } = useSession()
   const { quantity } = useCart()
 
@@ -23,9 +29,25 @@ function Header() {
     setOpenCart(false)
   }
 
+  function handleOpenChange(open: boolean) {
+    if (isCartOpen && onOpenCart) {
+      onOpenCart(open)
+    } else {
+      setOpenCart(open)
+    }
+  }
+
   return (
-    <HoverCard.Root openDelay={0} closeDelay={0}>
-      <Dialog.Root open={openCart} onOpenChange={setOpenCart}>
+    <HoverCard.Root
+      open={openWishlist}
+      onOpenChange={setOpenWishlist}
+      openDelay={0}
+      closeDelay={0}
+    >
+      <Dialog.Root
+        open={isCartOpen ? isCartOpen : openCart}
+        onOpenChange={onOpenCart ? onOpenCart : setOpenCart}
+      >
         <S.Wrapper>
           <Link href="/" passHref>
             <Logo />
@@ -37,7 +59,10 @@ function Header() {
                 <FiUser size={26} color="#071B39" />
               </Link>
               <HoverCard.Trigger asChild>
-                <button data-testid="open-wishlist">
+                <button
+                  onClick={() => setOpenWishlist((state) => !state)}
+                  data-testid="open-wishlist"
+                >
                   <FiHeart size={26} color="#071B39" />
                 </button>
               </HoverCard.Trigger>

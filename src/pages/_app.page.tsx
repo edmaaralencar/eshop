@@ -38,7 +38,8 @@ function App({ Component, pageProps }: AppProps) {
               <GlobalStyles />
               <ToastContainer />
               {router.pathname !== '/sign-in' &&
-                router.pathname !== '/sign-up' && <Header />}
+                router.pathname !== '/sign-up' &&
+                router.pathname !== '/products/[id]' && <Header />}
               <Component {...pageProps} />
 
               <Footer />
