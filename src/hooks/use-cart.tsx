@@ -59,7 +59,10 @@ export function CartProvider({ children }: CartProviderProps) {
         url += `id=${item.id}&`
       }
 
-      const { data } = await api.get(url)
+      const { data } = await api({
+        url: url,
+        method: 'GET'
+      })
 
       return data
     },
