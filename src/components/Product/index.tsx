@@ -35,13 +35,10 @@ function Product({ id, name, image, price }: ProductProps) {
 
   return (
     <S.Wrapper>
-      <S.ImageWrapper>
-        <Image
-          src={formatImageUrl(image)}
-          alt={name}
-          width={330}
-          height={210}
-        />
+      <S.ImageContainer>
+        <S.ImageWrapper>
+          <Image src={formatImageUrl(image)} alt={name} fill priority />
+        </S.ImageWrapper>
         <S.ButtonContainer>
           <IconButton
             onClick={handleAddToFavorites}
@@ -54,7 +51,7 @@ function Product({ id, name, image, price }: ProductProps) {
             }
           />
         </S.ButtonContainer>
-      </S.ImageWrapper>
+      </S.ImageContainer>
       <S.ProductInfo>
         <span>{name}</span>
         <strong>{formatMoney(price)}</strong>

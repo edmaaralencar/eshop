@@ -2,7 +2,7 @@ import { GetServerSidePropsContext } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { api } from 'lib/axios'
+import prisma from 'lib/prisma'
 import { formatMoney } from 'utils/format-money'
 import protectedRoutes from 'utils/protected-routes'
 import { formatImageUrl } from 'utils/format-image-url'
@@ -87,7 +87,7 @@ export default function Orders({ orders }: OrdersProps) {
                   <span>Pedido nº</span>
                   <strong>{order.id}</strong>
                 </div>
-                <div className="last">
+                <div>
                   <span>Total</span>
                   <strong>{formatMoney(order.total / 100)}</strong>
                 </div>
@@ -109,18 +109,48 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     }
   }
 
-  const { data } = await api({
-    url: '/orders',
-    method: 'GET',
-    headers: {
-      Cookie: context.req.headers.cookie
+  const user = await prisma.user.findUnique({
+    where: {
+      email: String(session?.user?.email)
+    }
+  })
+
+  const orders = await prisma.order.findMany({
+    where: {
+      user_id: user?.id
+    },
+    orderBy: {
+      created_at: 'desc'
+    },
+    include: {
+      order_products: {
+        include: {
+          product: {
+            include: {
+              images: true
+            }
+          }
+        }
+      }
     }
   })
 
   return {
     props: {
       session,
-      orders: data
+      orders: orders.map((order) => ({
+        ...order,
+        created_at: String(order.created_at),
+        updated_at: String(order.updated_at),
+        order_products: order.order_products.map((order_product) => ({
+          ...order_product,
+          product: {
+            ...order_product.product,
+            created_at: String(order_product.product.created_at),
+            updated_at: String(order_product.product.updated_at)
+          }
+        }))
+      }))
     }
   }
 }

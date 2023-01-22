@@ -37,4 +37,9 @@ export const InputContainer = styled.div`
   gap: 2.4rem;
 
   margin-bottom: 2.4rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
 `

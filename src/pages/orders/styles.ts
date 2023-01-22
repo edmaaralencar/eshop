@@ -24,6 +24,10 @@ export const Container = styled.div`
 
   padding: 2.4rem;
 
+  @media (max-width: 400px) {
+    padding: 1.6rem;
+  }
+
   h2 {
     color: ${({ theme }) => theme.colors.title};
     font-size: 2rem;
@@ -46,6 +50,7 @@ export const OrderFooter = styled.header`
   padding: 1rem;
 
   display: flex;
+  flex-wrap: wrap;
   gap: 2.4rem;
 
   > div {
@@ -53,11 +58,6 @@ export const OrderFooter = styled.header`
     flex-direction: column;
     gap: 0.4rem;
     color: ${({ theme }) => theme.colors.white};
-
-    &.last {
-      flex: 1;
-      text-align: end;
-    }
 
     span {
       font-size: 1.2rem;
@@ -107,6 +107,10 @@ export const OrderProduct = styled.div`
 export const OrderProductContent = styled.div`
   display: flex;
   gap: 1.2rem;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 
   div {
     display: flex;

@@ -21,7 +21,7 @@ function Card({ size, title, image, description }: CardProps) {
         </Button>
 
         <S.ImageWrapperBig>
-          <Image src={image} alt={title} layout="fill" />
+          <Image src={image} alt={title} fill />
         </S.ImageWrapperBig>
       </S.Wrapper>
     )
@@ -37,7 +37,7 @@ function Card({ size, title, image, description }: CardProps) {
       </Link>
 
       <S.ImageWrapper>
-        <Image src={image} alt={title} layout="fill" />
+        <Image src={image} alt={title} fill />
       </S.ImageWrapper>
     </S.Wrapper>
   )

@@ -19,7 +19,7 @@ export const Header = styled.header`
   padding: 1.6rem;
   background-color: ${({ theme }) => theme.colors.primary.main};
 
-  div {
+  div:last-child {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
@@ -47,6 +47,12 @@ export const Body = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
 
     span {
       font-weight: 400;
@@ -94,6 +100,7 @@ export const ProductsList = styled.div`
 export const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 0.4rem;
 `
 
 export const ProductContent = styled.div`
@@ -103,6 +110,14 @@ export const ProductContent = styled.div`
   h4 {
     font-size: 1.8rem;
     color: ${({ theme }) => theme.colors.title};
+  }
+
+  @media (max-width: 400px) {
+    gap: 0.8rem;
+
+    h4 {
+      font-size: 1.6rem;
+    }
   }
 `
 
@@ -122,5 +137,22 @@ export const ProductPrice = styled.div`
     font-size: 1.2rem;
     text-align: end;
     color: ${({ theme }) => theme.colors.text.purple};
+  }
+`
+
+export const ImageWrapper = styled.div`
+  position: relative;
+
+  width: 25rem;
+  height: 16rem;
+
+  @media (max-width: 520px) {
+    width: 16rem;
+    height: 10rem;
+  }
+
+  @media (max-width: 360px) {
+    width: 14rem;
+    height: 8rem;
   }
 `

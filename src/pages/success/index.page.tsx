@@ -27,7 +27,9 @@ export default function Success() {
   return (
     <S.Wrapper>
       <S.Header>
-        <Image src="/success.png" width={160} height={160} alt="Success" />
+        <S.ImageWrapper>
+          <Image src="/success.png" fill alt="Success" />
+        </S.ImageWrapper>
         <div>
           <h1>Compra feita com sucesso.</h1>
           <p>

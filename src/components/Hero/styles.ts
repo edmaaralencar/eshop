@@ -23,6 +23,10 @@ export const Wrapper = styled.section`
       gap: 2.4rem;
       padding: 3.2rem;
     }
+
+    @media (max-width: 450px) {
+      height: 67rem;
+    }
   `}
 `
 
@@ -57,6 +61,11 @@ export const ImageWrapper = styled.div`
 
   @media (max-width: 768px) {
     width: 40rem;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    height: 50rem;
   }
 `
 

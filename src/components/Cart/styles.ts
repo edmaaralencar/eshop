@@ -34,13 +34,14 @@ export const Content = styled(Dialog.Content)`
       transform: translate(0, 0%) scale(1);
     }
   }
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
     hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
   position: fixed;
   right: 0;
   top: 0;
-  width: 48.4rem;
+  width: 100%;
+  max-width: 48.4rem;
   height: 100vh;
   padding: 3.2rem;
 
@@ -76,6 +77,7 @@ export const EmptyCart = styled.span`
 `
 
 export const ProductImage = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,6 +86,21 @@ export const ProductImage = styled.div`
 
   border-radius: 0.8rem;
   background-color: ${({ theme }) => theme.colors.primary.light};
+
+  @media (max-width: 360px) {
+    font-size: 1.6rem;
+  }
+`
+
+export const ImageWrapper = styled.div`
+  position: relative;
+  width: 13rem;
+  height: 13rem;
+
+  @media (max-width: 340px) {
+    width: 10rem;
+    height: 10rem;
+  }
 `
 
 export const ProductContent = styled.div`
@@ -112,6 +129,16 @@ export const ProductQuantityTotal = styled.div`
   strong {
     font-size: 2rem;
     font-weight: 600;
+
+    @media (max-width: 360px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
   }
 `
 

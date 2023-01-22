@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div``
 
-export const ImageWrapper = styled.div`
+export const ImageContainer = styled.div`
   position: relative;
 
   display: grid;
@@ -14,6 +14,14 @@ export const ImageWrapper = styled.div`
   img {
     margin-top: 1rem;
   }
+`
+
+export const ImageWrapper = styled.div`
+  position: relative;
+
+  height: 21rem;
+  width: 100%;
+  max-width: 33rem;
 `
 
 export const ButtonContainer = styled.div`

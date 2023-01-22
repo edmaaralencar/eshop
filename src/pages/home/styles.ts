@@ -23,6 +23,12 @@ export const SectionHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
 `
 
 export const Products = styled.div`

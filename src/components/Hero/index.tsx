@@ -25,7 +25,7 @@ function Hero() {
         </S.ButtonWrapper>
       </S.Content>
       <S.ImageWrapper>
-        <Image src="/produto.png" alt="product" layout="fill" />
+        <Image src="/produto.png" alt="product" fill />
       </S.ImageWrapper>
     </S.Wrapper>
   )

@@ -48,12 +48,15 @@ function Cart({ onCloseCart }: CartProps) {
                 {cartItems?.map((item) => (
                   <S.Product key={item.product?.id}>
                     <S.ProductImage>
-                      <Image
-                        alt={item.product.name}
-                        src={formatImageUrl(item.product?.images[0].image_url)}
-                        width={130}
-                        height={130}
-                      />
+                      <S.ImageWrapper>
+                        <Image
+                          alt={item.product.name}
+                          src={formatImageUrl(
+                            item.product?.images[0].image_url
+                          )}
+                          fill
+                        />
+                      </S.ImageWrapper>
                     </S.ProductImage>
                     <S.ProductContent>
                       <S.ProductName>{item.product?.name}</S.ProductName>
