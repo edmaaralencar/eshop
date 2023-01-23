@@ -20,6 +20,17 @@ jest.mock('@stripe/react-stripe-js', () => ({
   })
 }))
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const useRouter = jest.spyOn(require('next/router'), 'useRouter')
+const push = jest.fn()
+
+useRouter.mockImplementation(() => ({
+  push,
+  query: '',
+  asPath: '',
+  route: '/'
+}))
+
 describe('<CheckoutForm />', () => {
   it('should render the component correctly', () => {
     const { container } = renderWithTheme(<CheckoutForm />)

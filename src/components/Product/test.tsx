@@ -37,7 +37,7 @@ describe('<Product />', () => {
     const image_url = `/_next/image?url=%2Fproducts%2F%2F${props.image.slice(
       1,
       props.image.length
-    )}&w=750&q=75`
+    )}&w=3840&q=75`
 
     // src="/_next/image?url=%2Fproducts%2F%2Fproduto.png&w=750&q=75"
 

@@ -94,7 +94,7 @@ exports[`<CheckoutForm /> should render the component correctly 1`] = `
       class="c1"
     >
       <a
-        href=""
+        href="/products"
       >
         Continuar comprando
       </a>

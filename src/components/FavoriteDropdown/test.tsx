@@ -1,10 +1,10 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 
 import * as HoverCard from '@radix-ui/react-hover-card'
 import { WishlistContext } from 'hooks/use-wishlist'
+import { renderWithTheme } from 'utils/test-helper'
 
 import FavoriteDropdown from '.'
-import { renderWithTheme } from 'utils/test-helper'
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),

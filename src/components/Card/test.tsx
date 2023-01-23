@@ -17,7 +17,7 @@ describe('<Card />', () => {
       screen.getByRole('heading', { level: 4, name: /teste/i })
     ).toBeInTheDocument()
 
-    expect(screen.getByRole('img').parentElement?.parentElement).toHaveStyle({
+    expect(screen.getByRole('img').parentElement).toHaveStyle({
       width: '29rem'
     })
 
@@ -37,7 +37,7 @@ describe('<Card />', () => {
       screen.getByRole('heading', { level: 4, name: /teste/i })
     ).toBeInTheDocument()
 
-    expect(screen.getByRole('img').parentElement?.parentElement).toHaveStyle({
+    expect(screen.getByRole('img').parentElement).toHaveStyle({
       width: '40rem'
     })
 
