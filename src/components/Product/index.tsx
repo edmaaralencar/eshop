@@ -1,15 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FiHeart } from 'react-icons/fi'
+import { useSession } from 'next-auth/react'
 
 import { useWishlist } from 'hooks/use-wishlist'
 import { formatMoney } from 'utils/format-money'
+import { formatImageUrl } from 'utils/format-image-url'
 
 import Button from 'components/Button'
 import IconButton from 'components/IconButton'
 
 import * as S from './styles'
-import { formatImageUrl } from 'utils/format-image-url'
 
 export type ProductProps = {
   id: string
@@ -19,7 +20,8 @@ export type ProductProps = {
 }
 
 function Product({ id, name, image, price }: ProductProps) {
-  const { addOrRemoveProductOfWishlist, productIsInWishlist } = useWishlist()
+  const session = useSession()
+  const { addOrRemoveProductOfWishlist, isProductInWishlist } = useWishlist()
 
   function handleAddToFavorites() {
     addOrRemoveProductOfWishlist({
@@ -31,26 +33,26 @@ function Product({ id, name, image, price }: ProductProps) {
     })
   }
 
-  const isProductInWishlist = productIsInWishlist(id)
-
   return (
     <S.Wrapper>
       <S.ImageContainer>
         <S.ImageWrapper>
           <Image src={formatImageUrl(image)} alt={name} fill priority />
         </S.ImageWrapper>
-        <S.ButtonContainer>
-          <IconButton
-            onClick={handleAddToFavorites}
-            icon={
-              isProductInWishlist ? (
-                <FiHeart size={24} fill="#6C6CFF" color="#6C6CFF" />
-              ) : (
-                <FiHeart size={24} color="#6C6CFF" />
-              )
-            }
-          />
-        </S.ButtonContainer>
+        {session.status === 'authenticated' && (
+          <S.ButtonContainer>
+            <IconButton
+              onClick={handleAddToFavorites}
+              icon={
+                isProductInWishlist(id) ? (
+                  <FiHeart size={24} fill="#6C6CFF" color="#6C6CFF" />
+                ) : (
+                  <FiHeart size={24} color="#6C6CFF" />
+                )
+              }
+            />
+          </S.ButtonContainer>
+        )}
       </S.ImageContainer>
       <S.ProductInfo>
         <span>{name}</span>
