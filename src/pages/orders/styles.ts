@@ -151,3 +151,19 @@ export const OrderProductPrice = styled.div`
     color: ${({ theme }) => theme.colors.text.purple};
   }
 `
+
+export const Empty = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  max-width: 50rem;
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+`
