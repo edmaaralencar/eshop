@@ -16,8 +16,7 @@ type WishlistProviderProps = {
 type WishlistContextData = {
   items: IProduct[]
   addOrRemoveProductOfWishlist: (product: IProduct) => void
-  // removeProductFromWishlist: (id: string) => void
-  productIsInWishlist: (id: string) => boolean
+  isProductInWishlist: (id: string) => boolean
 }
 
 export const WishlistContext = createContext({} as WishlistContextData)
@@ -38,12 +37,12 @@ export function WishlistProvider({ children }: WishlistProviderProps) {
     }
   }, [data?.user])
 
-  function productIsInWishlist(id: string) {
+  function isProductInWishlist(id: string) {
     return items.some((item) => item.id === id)
   }
 
   function addOrRemoveProductOfWishlist(product: IProduct) {
-    if (productIsInWishlist(product.id)) {
+    if (isProductInWishlist(product.id)) {
       setItems((prevState) =>
         prevState.filter((item) => item.id !== product.id)
       )
@@ -57,15 +56,11 @@ export function WishlistProvider({ children }: WishlistProviderProps) {
     }
   }
 
-  // function removeProductFromWishlist(product: IProduct) {
-  //   setItems((prevState) => prevState.filter())
-  // }
-
   return (
     <WishlistContext.Provider
       value={{
         items,
-        productIsInWishlist,
+        isProductInWishlist,
         addOrRemoveProductOfWishlist
       }}
     >

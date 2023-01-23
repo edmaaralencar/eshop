@@ -12,7 +12,7 @@ import { formatMoney } from 'utils/format-money'
 import * as S from './styles'
 
 function FavoriteDropdown() {
-  const { items, addOrRemoveProductOfWishlist, productIsInWishlist } =
+  const { items, addOrRemoveProductOfWishlist, isProductInWishlist } =
     useWishlist()
 
   return (
@@ -47,7 +47,7 @@ function FavoriteDropdown() {
                       <IconButton
                         onClick={() => addOrRemoveProductOfWishlist(product)}
                         icon={
-                          productIsInWishlist(product.id) ? (
+                          isProductInWishlist(product.id) ? (
                             <FiHeart size={18} fill="#6C6CFF" color="#6C6CFF" />
                           ) : (
                             <FiHeart size={18} color="#6C6CFF" />
