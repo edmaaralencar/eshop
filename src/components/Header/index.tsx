@@ -29,14 +29,6 @@ function Header({ isCartOpen = null, onOpenCart }: HeaderProps) {
     setOpenCart(false)
   }
 
-  function handleOpenChange(open: boolean) {
-    if (isCartOpen && onOpenCart) {
-      onOpenCart(open)
-    } else {
-      setOpenCart(open)
-    }
-  }
-
   return (
     <HoverCard.Root
       open={openWishlist}
