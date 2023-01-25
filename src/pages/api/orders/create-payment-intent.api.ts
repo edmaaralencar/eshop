@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import prisma from 'lib/prisma'
 import { stripe } from 'lib/stripe'
+import { IProduct } from '../../../@types/product'
 
 export default async function handler(
   req: NextApiRequest,
@@ -31,7 +32,7 @@ export default async function handler(
     }
 
     const total = cartItems?.reduce(
-      (acc: number, item: { product: any; quantity: number }) =>
+      (acc: number, item: { product: IProduct; quantity: number }) =>
         (acc += item.product.price * item.quantity),
       0
     )

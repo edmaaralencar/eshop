@@ -71,8 +71,8 @@ function FormSignUp() {
     }
 
     try {
-      const response = await api.post('/users/sign-up', values)
-      console.log(response)
+      await api.post('/users/sign-up', values)
+
       toast.success('Conta criada com sucesso.')
       Router.push('/sign-in')
     } catch (error) {
