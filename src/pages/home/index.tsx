@@ -51,7 +51,7 @@ function Home({ products }: HomeProps) {
         </S.SectionHeader>
         <Hr />
         <S.Products>
-          {products?.slice(6).map((product) => (
+          {products?.slice(0, 6).map((product) => (
             <Product
               key={product.id}
               id={product.id}
